@@ -35,11 +35,11 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         btnLogin.setOnClickListener(v -> {
-            boolean admin = roleToggle.isChecked();
+            boolean isAdmin = roleToggle.isChecked();
             String user = etUser.getText().toString().trim();
             String pass = etPass.getText().toString().trim();
 
-            if (admin) {
+            if (isAdmin) {
                 if ("admin".equalsIgnoreCase(user) && "admin123".equals(pass)) {
                     startActivity(new Intent(this, AdminDashboardActivity.class));
                     finish();
@@ -47,13 +47,13 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(this, "Invalid admin credentials", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                if (user.isEmpty()) {
-                    Toast.makeText(this, "Enter Student ID", Toast.LENGTH_SHORT).show();
-                } else {
+                if ("student".equalsIgnoreCase(user)) {
                     Intent i = new Intent(this, StudentDashboardActivity.class);
                     i.putExtra("student_id", user);
                     startActivity(i);
                     finish();
+                } else {
+                    Toast.makeText(this, "Invalid student ID", Toast.LENGTH_SHORT).show();
                 }
             }
         });
