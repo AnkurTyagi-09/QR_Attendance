@@ -8,7 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRAttendance">
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activities.LoginActivity"/>
         <activity android:name=".activities.AdminDashboardActivity"/>
         <activity android:name=".activities.GenerateQRActivity"/>
         <activity android:name=".activities.StudentDashboardActivity"/>
