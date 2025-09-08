@@ -1,0 +1,10 @@
+<resources>
+    <color name="md_primary">#1E88E5</color>
+    <color name="md_primary_variant">#1565C0</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_bg">#0B0F17</color>
+    <color name="md_card">#121826</color>
+    <color name="md_text">#DCE3F1</color>
+    <color name="md_accent">#64B5F6</color>
+    <color name="md_success">#2E7D32</color>
+</resources>
